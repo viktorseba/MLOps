@@ -32,5 +32,5 @@ line-length = 120
 omit = ["tests/*"]
 
 [project.scripts]
-train = "session2.train:main"
-evaluate = "session2.evaluate:main"
+train = "session2.train:train"
+evaluate = "session2.evaluate:evaluate"
