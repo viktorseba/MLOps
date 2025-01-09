@@ -15,10 +15,10 @@ COPY src/session2/ src/session2/
 COPY data/ data/
 
 # Install requirements from scratch
-RUN pip install -r requirements.txt --no-cache-dir --verbose
+# RUN pip install -r requirements.txt --no-cache-dir --verbose
 
 # Install requirements from cache
-# RUN --mount=type=cache,target=~/pip/.cache pip install -r requirements.txt --no-cache-dir
+RUN --mount=type=cache,target=~/pip/.cache pip install -r requirements.txt --no-cache-dir
 
 # Install project
 RUN pip install . --no-deps --no-cache-dir --verbose

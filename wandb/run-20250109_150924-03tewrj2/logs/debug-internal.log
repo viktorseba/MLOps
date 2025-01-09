@@ -1,0 +1,16 @@
+{"time":"2025-01-09T15:09:24.2602109+01:00","level":"INFO","msg":"using version","core version":"0.19.1"}
+{"time":"2025-01-09T15:09:24.2620167+01:00","level":"INFO","msg":"created symlink","path":"C:\\Users\\jonas\\Desktop\\DTU\\MLOps\\MLOps\\wandb\\run-20250109_150924-03tewrj2\\logs\\debug-core.log"}
+{"time":"2025-01-09T15:09:27.5766779+01:00","level":"INFO","msg":"created new stream","id":"03tewrj2"}
+{"time":"2025-01-09T15:09:27.5775192+01:00","level":"INFO","msg":"stream: started","id":"03tewrj2"}
+{"time":"2025-01-09T15:09:27.5781573+01:00","level":"INFO","msg":"writer: Do: started","stream_id":"03tewrj2"}
+{"time":"2025-01-09T15:09:27.5781573+01:00","level":"INFO","msg":"handler: started","stream_id":"03tewrj2"}
+{"time":"2025-01-09T15:09:27.5781573+01:00","level":"INFO","msg":"sender: started","stream_id":"03tewrj2"}
+{"time":"2025-01-09T15:09:27.9967577+01:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-01-09T15:09:29.0209985+01:00","level":"INFO","msg":"stream: closing","id":"03tewrj2"}
+{"time":"2025-01-09T15:09:29.0209985+01:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-01-09T15:09:29.0220687+01:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-01-09T15:09:29.7783486+01:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-01-09T15:09:30.0021624+01:00","level":"INFO","msg":"handler: closed","stream_id":"03tewrj2"}
+{"time":"2025-01-09T15:09:30.0021624+01:00","level":"INFO","msg":"sender: closed","stream_id":"03tewrj2"}
+{"time":"2025-01-09T15:09:30.0021624+01:00","level":"INFO","msg":"writer: Close: closed","stream_id":"03tewrj2"}
+{"time":"2025-01-09T15:09:30.0037446+01:00","level":"INFO","msg":"stream: closed","id":"03tewrj2"}

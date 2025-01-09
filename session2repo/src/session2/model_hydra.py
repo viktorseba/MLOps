@@ -1,17 +1,21 @@
 import torch
 from torch import nn
+import hydra
 
 
+@hydra.main(config_path="config", config_name="config.yaml")
 class MyAwesomeModel(nn.Module):
     """My awesome model."""
 
-    def __init__(self) -> None:
+    def __init__(self, cfg) -> None:
         super().__init__()
-        self.conv1 = nn.Conv2d(1, 32, 3, 1)
-        self.conv2 = nn.Conv2d(32, 64, 3, 1)
-        self.conv3 = nn.Conv2d(64, 128, 3, 1)
+
+        hparams = cfg.model
+        self.conv1 = nn.Conv2d(hparams['input_dim'], hparams['conv_size_1'], 3, 1)
+        self.conv2 = nn.Conv2d(hparams['conv_size_1'], hparams['conv_size_2'], 3, 1)
+        self.conv3 = nn.Conv2d(hparams['conv_size_2'], hparams['conv_size_3'], 3, 1)
         self.dropout = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(128, 10)
+        self.fc1 = nn.Linear(hparams['conv_size_3'], hparams['output_dim'])
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward pass."""
