@@ -3,7 +3,6 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader
 from mnist_project.data import corrupt_mnist
-
 # import wandb
 
 
@@ -19,7 +18,10 @@ class MyAwesomeModel(pl.LightningModule):
         self.fc1 = nn.Linear(128, 10)
 
         self.loss_fn = nn.CrossEntropyLoss()
-        self.train_ds, self.test_ds = corrupt_mnist()
+        try:
+            self.train_ds, self.test_ds = corrupt_mnist()
+        except FileNotFoundError:
+            self.train_ds, self.test_ds = None, None
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward pass."""
