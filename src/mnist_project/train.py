@@ -6,7 +6,7 @@ from mnist_project.model import MyAwesomeModel
 import hydra
 import typer.completion
 from hydra import compose, initialize
-from sklearn.metrics import RocCurveDisplay, accuracy_score, f1_score, precision_score, recall_score
+# from sklearn.metrics import RocCurveDisplay, accuracy_score, f1_score, precision_score, recall_score
 # from time import time
 
 import wandb
