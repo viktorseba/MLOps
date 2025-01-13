@@ -1,5 +1,6 @@
 import torch
 import typer
+import warnings
 
 
 def normalize(images: torch.Tensor) -> torch.Tensor:
@@ -35,6 +36,7 @@ def preprocess_data(raw_dir: str, processed_dir: str) -> None:
 
 def corrupt_mnist() -> tuple[torch.utils.data.Dataset, torch.utils.data.Dataset]:
     """Return train and test datasets for corrupt MNIST."""
+    warnings.simplefilter(action='ignore', category=FutureWarning)
     train_images = torch.load("data/processed/train_images.pt")
     train_target = torch.load("data/processed/train_target.pt")
     test_images = torch.load("data/processed/test_images.pt")
