@@ -2,7 +2,8 @@ docs/site/
 
 
 # datasets
-data/
+data/processed/
+data/raw/
 *.pt
 
 # test cache
