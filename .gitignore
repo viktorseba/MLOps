@@ -3,6 +3,7 @@ docs/site/
 
 # datasets
 data/
+*.pt
 
 # test cache
 manual_test/
