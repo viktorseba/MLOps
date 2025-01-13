@@ -3,13 +3,9 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader
 from mnist_project.data import corrupt_mnist
-import pytest
-import os
-from tests import _PATH_DATA
 # import wandb
 
 
-@pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")
 class MyAwesomeModel(pl.LightningModule):
     """My awesome model."""
 
@@ -22,7 +18,10 @@ class MyAwesomeModel(pl.LightningModule):
         self.fc1 = nn.Linear(128, 10)
 
         self.loss_fn = nn.CrossEntropyLoss()
-        self.train_ds, self.test_ds = corrupt_mnist()
+        try:
+            self.train_ds, self.test_ds = corrupt_mnist()
+        except FileNotFoundError:
+            self.train_ds, self.test_ds = None, None
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward pass."""
