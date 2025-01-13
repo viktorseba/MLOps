@@ -3,10 +3,13 @@ import torch
 from torch import nn
 from torch.utils.data import DataLoader
 from mnist_project.data import corrupt_mnist
-
+import pytest
+import os
+from tests import _PATH_DATA
 # import wandb
 
 
+@pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")
 class MyAwesomeModel(pl.LightningModule):
     """My awesome model."""
 
