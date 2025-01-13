@@ -61,7 +61,7 @@ def train() -> None:
             statistics["train_accuracy"].append(accuracy)
 
             wandb.log({"train_loss": loss.item(), "train_accuracy": accuracy})
-            
+
             preds.append(y_pred.detach().cpu())
             targets.append(target.detach().cpu())
 
