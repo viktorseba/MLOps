@@ -6,7 +6,7 @@ from mnist_project.model import MyAwesomeModel
 import hydra
 import typer.completion
 from hydra import compose, initialize
-# from sklearn.metrics import RocCurveDisplay, accuracy_score, f1_score, precision_score, recall_score
+from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 # from time import time
 
 import wandb
@@ -19,7 +19,9 @@ app = typer.Typer()
 def train() -> None:
     """Train a model on MNIST."""
     print("Training day and night")
-    DEVICE = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
+    DEVICE = torch.device(
+        "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
+    )
 
     with initialize(config_path="../../config"):
         cfg = compose(config_name="config.yaml")
@@ -27,24 +29,24 @@ def train() -> None:
     hparams = cfg.training
     model = MyAwesomeModel().to(DEVICE)
     optimizer = hydra.utils.instantiate(cfg.optimizer, params=model.parameters())
-    print("lr = {}, batch_size = {}, epochs = {}".format(cfg.optimizer['lr'], hparams['batch_size'], hparams['epochs']))
+    print("lr = {}, batch_size = {}, epochs = {}".format(cfg.optimizer["lr"], hparams["batch_size"], hparams["epochs"]))
 
     run = wandb.init(
         entity="Seb_Jones",
         project="corrupt_mnist",
-        config={"lr": cfg.optimizer['lr'], "batch_size": hparams['batch_size'], "epochs": hparams['epochs']},
+        config={"lr": cfg.optimizer["lr"], "batch_size": hparams["batch_size"], "epochs": hparams["epochs"]},
         name="run",
     )
 
     train_set, _ = corrupt_mnist()
 
-    train_dataloader = torch.utils.data.DataLoader(train_set, batch_size=hparams['batch_size'])
+    train_dataloader = torch.utils.data.DataLoader(train_set, batch_size=hparams["batch_size"])
 
     loss_fn = torch.nn.CrossEntropyLoss()
 
     statistics = {"train_loss": [], "train_accuracy": []}
     # wandb.log(statistics)
-    for epoch in range(hparams['epochs']):
+    for epoch in range(hparams["epochs"]):
         model.train()
 
         preds, targets = [], []
@@ -80,20 +82,7 @@ def train() -> None:
         preds = torch.cat(preds, 0)
         targets = torch.cat(targets, 0)
 
-        wandb.log({"roc": wandb.plot.roc_curve(targets, preds,
-                                               labels=None, classes_to_plot=None)})
-
-        # for class_id in range(10):
-        #     one_hot = torch.zeros_like(targets)
-        #     one_hot[targets == class_id] = 1
-        #     _ = RocCurveDisplay.from_predictions(
-        #         one_hot,
-        #         preds[:, class_id],
-        #         name=f"ROC curve for {class_id}",
-        #         plot_chance_level=(class_id == 2),
-        #     )
-
-        # wandb.plot({"roc": plt})
+        wandb.log({"roc": wandb.plot.roc_curve(targets, preds, labels=None, classes_to_plot=None)})
 
     print("Training complete")
 
@@ -102,7 +91,7 @@ def train() -> None:
     axs[0].set_title("Train loss")
     axs[1].plot(statistics["train_accuracy"])
     axs[1].set_title("Train accuracy")
-    fig.savefig(hparams['fig_path'])
+    fig.savefig(hparams["fig_path"])
 
     final_accuracy = accuracy_score(targets, preds.argmax(dim=1))
     final_precision = precision_score(targets, preds.argmax(dim=1), average="weighted")
@@ -110,14 +99,14 @@ def train() -> None:
     final_f1 = f1_score(targets, preds.argmax(dim=1), average="weighted")
 
     # first we save the model to a file then log it as an artifact
-    torch.save(model.state_dict(), hparams['model_path'])
+    torch.save(model.state_dict(), hparams["model_path"])
     artifact = wandb.Artifact(
         name="corrupt_mnist_model",
         type="model",
         description="A model trained to classify corrupt MNIST images",
         metadata={"accuracy": final_accuracy, "precision": final_precision, "recall": final_recall, "f1": final_f1},
     )
-    artifact.add_file(hparams['model_path'])
+    artifact.add_file(hparams["model_path"])
     run.log_artifact(artifact)
 
 

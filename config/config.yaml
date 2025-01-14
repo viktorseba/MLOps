@@ -1,4 +1,3 @@
 defaults:
   - optimizer: adam
   - training: training_conf
-

@@ -1,9 +1,8 @@
 import torch
+
 # from model import MyAwesomeModel
 import pytest
 from src.mnist_project.model import MyAwesomeModel
-from tests import _PATH_DATA
-import os.path
 
 
 # @pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")
@@ -18,7 +17,7 @@ def test_model(batch_size: int):
 # @pytest.mark.skipif(not os.path.exists(_PATH_DATA), reason="Data files not found")
 def test_error_on_wrong_shape():
     model = MyAwesomeModel()
-    with pytest.raises(ValueError, match='Expected input to a 4D tensor'):
+    with pytest.raises(ValueError, match="Expected input to a 4D tensor"):
         model(torch.randn(1, 2, 3))
-    with pytest.raises(ValueError, match=r'Expected each sample to have shape \(1, 28, 28\)'):
+    with pytest.raises(ValueError, match=r"Expected each sample to have shape \(1, 28, 28\)"):
         model(torch.randn(1, 1, 28, 29))

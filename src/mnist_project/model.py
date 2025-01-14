@@ -26,9 +26,9 @@ class MyAwesomeModel(pl.LightningModule):
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         """Forward pass."""
         if x.ndim != 4:
-            raise ValueError('Expected input to a 4D tensor')
+            raise ValueError("Expected input to a 4D tensor")
         if x.shape[1] != 1 or x.shape[2] != 28 or x.shape[3] != 28:
-            raise ValueError('Expected each sample to have shape (1, 28, 28)')
+            raise ValueError("Expected each sample to have shape (1, 28, 28)")
 
         x = torch.relu(self.conv1(x))
         x = torch.max_pool2d(x, 2, 2)
@@ -46,8 +46,8 @@ class MyAwesomeModel(pl.LightningModule):
         y_pred = self(img)
         loss = self.loss_fn(y_pred, target)
         acc = (target == y_pred.argmax(dim=-1)).float().mean()
-        self.log('train_loss', loss)
-        self.log('train_acc', acc)
+        self.log("train_loss", loss)
+        self.log("train_acc", acc)
         # self.logger.experiment.log({'logits': wandb.Histrogram(y_pred)})
         return loss
 
@@ -56,8 +56,8 @@ class MyAwesomeModel(pl.LightningModule):
         preds = self(data)
         loss = self.loss_fn(preds, target)
         acc = (target == preds.argmax(dim=-1)).float().mean()
-        self.log('val_loss', loss, on_epoch=True)
-        self.log('val_acc', acc, on_epoch=True)
+        self.log("val_loss", loss, on_epoch=True)
+        self.log("val_acc", acc, on_epoch=True)
 
     def configure_optimizers(self):
         """Configure optimizer."""
