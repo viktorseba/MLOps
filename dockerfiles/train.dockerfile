@@ -11,7 +11,7 @@ COPY requirements.txt requirements.txt
 # COPY requirements_dev.txt requirements_dev.txt
 COPY README.md README.md
 COPY pyproject.toml pyproject.toml
-COPY src/session2/ src/session2/
+COPY src/mnist_project/ src/mnist_project/
 COPY data/ data/
 
 # Install requirements from scratch
@@ -23,7 +23,7 @@ RUN --mount=type=cache,target=~/pip/.cache pip install -r requirements.txt --no-
 # Install project
 RUN pip install . --no-deps --no-cache-dir --verbose
 
-ENTRYPOINT ["python", "-u", "src/session2/train.py"]
+ENTRYPOINT ["python", "-u", "src/mnist_project/train.py"]
 
 # to run train dockerfile
 # docker build -f dockerfiles/train.dockerfile . -t train:latest
