@@ -1,0 +1,1940 @@
+{
+  "id": "019483c5-f446-7428-abb9-5a4f229fba09",
+  "name": null,
+  "timestamp": "2025-01-20T13:52:56.006836",
+  "metadata": {
+    "metric_presets": [
+      "TextEvals",
+      "TargetDriftPreset"
+    ]
+  },
+  "tags": [],
+  "suite": {
+    "metrics": [
+      {
+        "type": "evidently:metric:ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "data_definition": null
+        },
+        "column_name": {
+          "type": "evidently:base:ColumnName",
+          "name": "326b991736caeb90af5a508ca552500e.content",
+          "display_name": "Text Length for content",
+          "dataset": "additional"
+        }
+      },
+      {
+        "type": "evidently:metric:ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "data_definition": null
+        },
+        "column_name": {
+          "type": "evidently:base:ColumnName",
+          "name": "c57693348aa66cd662a4e2e71aafe962.content",
+          "display_name": "Sentence Count for content",
+          "dataset": "additional"
+        }
+      },
+      {
+        "type": "evidently:metric:ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "data_definition": null
+        },
+        "column_name": {
+          "type": "evidently:base:ColumnName",
+          "name": "0183cabb866db8be395283f33a0b480c.content",
+          "display_name": "Sentiment for content",
+          "dataset": "additional"
+        }
+      },
+      {
+        "type": "evidently:metric:ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "data_definition": null
+        },
+        "column_name": {
+          "type": "evidently:base:ColumnName",
+          "name": "26c635127ca222ec7dc418d09fcbceb9.content",
+          "display_name": "OOV Words % for content",
+          "dataset": "additional"
+        }
+      },
+      {
+        "type": "evidently:metric:ColumnSummaryMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "data_definition": null
+        },
+        "column_name": {
+          "type": "evidently:base:ColumnName",
+          "name": "bafaec50480193ffd582ecc23d503c47.content",
+          "display_name": "Non Letter Character % for content",
+          "dataset": "additional"
+        }
+      },
+      {
+        "type": "evidently:metric:ColumnDriftMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "data_definition": null
+        },
+        "column_name": {
+          "type": "evidently:base:ColumnName",
+          "name": "target",
+          "display_name": "target",
+          "dataset": "main"
+        },
+        "stattest": null,
+        "stattest_threshold": null
+      },
+      {
+        "type": "evidently:metric:ColumnCorrelationsMetric",
+        "options": {
+          "color": null,
+          "render": null,
+          "data_definition": null
+        },
+        "column_name": {
+          "type": "evidently:base:ColumnName",
+          "name": "target",
+          "display_name": "target",
+          "dataset": "main"
+        }
+      },
+      {
+        "type": "evidently:metric:TargetByFeaturesTable",
+        "options": {
+          "color": null,
+          "render": null,
+          "data_definition": null
+        },
+        "columns": null
+      }
+    ],
+    "metric_results": [
+      {
+        "type": "evidently:metric_result:ColumnSummaryResult",
+        "column_name": "Text Length for content",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 12495,
+          "count": 12495,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 147.76,
+          "std": 152.58,
+          "min": 1.0,
+          "p25": 37.0,
+          "p50": 97.0,
+          "p75": 211.0,
+          "max": 4076.0,
+          "unique": 603,
+          "unique_percentage": 4.83,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 4.0,
+          "most_common_percentage": 1.99
+        },
+        "current_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 0,
+          "count": 0,
+          "missing": null,
+          "missing_percentage": null,
+          "mean": null,
+          "std": null,
+          "min": null,
+          "p25": null,
+          "p50": null,
+          "p75": null,
+          "max": null,
+          "unique": null,
+          "unique_percentage": null,
+          "infinite_count": null,
+          "infinite_percentage": null,
+          "most_common": null,
+          "most_common_percentage": null
+        },
+        "plot_data": {
+          "type": "evidently:metric_result:DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently:metric_result:Histogram",
+            "current": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                1.0,
+                186.22727272727272,
+                371.45454545454544,
+                556.6818181818181,
+                741.9090909090909,
+                927.1363636363636,
+                1112.3636363636363,
+                1297.590909090909,
+                1482.8181818181818,
+                1668.0454545454545,
+                1853.2727272727273,
+                2038.5,
+                2223.7272727272725,
+                2408.9545454545455,
+                2594.181818181818,
+                2779.409090909091,
+                2964.6363636363635,
+                3149.863636363636,
+                3335.090909090909,
+                3520.3181818181815,
+                3705.5454545454545,
+                3890.772727272727
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                1.0,
+                186.22727272727272,
+                371.45454545454544,
+                556.6818181818181,
+                741.9090909090909,
+                927.1363636363636,
+                1112.3636363636363,
+                1297.590909090909,
+                1482.8181818181818,
+                1668.0454545454545,
+                1853.2727272727273,
+                2038.5,
+                2223.7272727272725,
+                2408.9545454545455,
+                2594.181818181818,
+                2779.409090909091,
+                2964.6363636363635,
+                3149.863636363636,
+                3335.090909090909,
+                3520.3181818181815,
+                3705.5454545454545,
+                3890.772727272727
+              ],
+              "count": [
+                8920,
+                2287,
+                1201,
+                45,
+                21,
+                10,
+                5,
+                2,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.0,
+                0.18051170876671946,
+                0.3610234175334389,
+                0.5415351263001584,
+                0.7220468350668778,
+                0.9025585438335972,
+                1.0830702526003169,
+                1.2635819613670363,
+                1.4440936701337557,
+                1.624605378900475,
+                1.8051170876671945,
+                1.985628796433914,
+                2.1661405052006337,
+                2.346652213967353,
+                2.5271639227340725,
+                2.7076756315007917,
+                2.8881873402675113,
+                3.068699049034231,
+                3.24921075780095,
+                3.4297224665676698
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.0,
+                0.18051170876671946,
+                0.3610234175334389,
+                0.5415351263001584,
+                0.7220468350668778,
+                0.9025585438335972,
+                1.0830702526003169,
+                1.2635819613670363,
+                1.4440936701337557,
+                1.624605378900475,
+                1.8051170876671945,
+                1.985628796433914,
+                2.1661405052006337,
+                2.346652213967353,
+                2.5271639227340725,
+                2.7076756315007917,
+                2.8881873402675113,
+                3.068699049034231,
+                3.24921075780095,
+                3.4297224665676698
+              ],
+              "count": [
+                13,
+                38,
+                43,
+                327,
+                164,
+                652,
+                513,
+                675,
+                1069,
+                1156,
+                1559,
+                1712,
+                1649,
+                1381,
+                1433,
+                77,
+                23,
+                8,
+                2,
+                1
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": {
+            "type": "evidently:metric_result:DataByTarget",
+            "box_data": {
+              "current": {
+                "mins": [],
+                "lowers": [],
+                "means": [],
+                "uppers": [],
+                "maxs": [],
+                "values": []
+              },
+              "reference": {
+                "mins": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "lowers": [
+                  56.0,
+                  56.0,
+                  25.0
+                ],
+                "means": [
+                  122.0,
+                  126.0,
+                  67.0
+                ],
+                "uppers": [
+                  243.0,
+                  248.0,
+                  167.0
+                ],
+                "maxs": [
+                  1405.0,
+                  2176.0,
+                  4076.0
+                ],
+                "values": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            },
+            "scatter_data": null,
+            "contour_data": null,
+            "count_data": null,
+            "target_name": "target",
+            "target_type": "cat"
+          },
+          "counts_of_values": {
+            "current": {
+              "x": {},
+              "count": {}
+            },
+            "reference": {
+              "x": {
+                "0": 4,
+                "1": 9,
+                "2": 8,
+                "3": 11,
+                "4": 7,
+                "5": 14,
+                "6": 15,
+                "7": 10,
+                "8": 25,
+                "9": 23
+              },
+              "count": {
+                "0": 249,
+                "1": 180,
+                "2": 175,
+                "3": 125,
+                "4": 113,
+                "5": 96,
+                "6": 94,
+                "7": 93,
+                "8": 88,
+                "9": 85
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently:metric_result:ColumnSummaryResult",
+        "column_name": "Sentence Count for content",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 12495,
+          "count": 12495,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 2.31,
+          "std": 1.82,
+          "min": 1.0,
+          "p25": 1.0,
+          "p50": 2.0,
+          "p75": 3.0,
+          "max": 25.0,
+          "unique": 21,
+          "unique_percentage": 0.17,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 1.0,
+          "most_common_percentage": 46.91
+        },
+        "current_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 0,
+          "count": 0,
+          "missing": null,
+          "missing_percentage": null,
+          "mean": null,
+          "std": null,
+          "min": null,
+          "p25": null,
+          "p50": null,
+          "p75": null,
+          "max": null,
+          "unique": null,
+          "unique_percentage": null,
+          "infinite_count": null,
+          "infinite_percentage": null,
+          "most_common": null,
+          "most_common_percentage": null
+        },
+        "plot_data": {
+          "type": "evidently:metric_result:DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently:metric_result:Histogram",
+            "current": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                1.0,
+                2.090909090909091,
+                3.1818181818181817,
+                4.2727272727272725,
+                5.363636363636363,
+                6.454545454545454,
+                7.545454545454545,
+                8.636363636363637,
+                9.727272727272727,
+                10.818181818181817,
+                11.909090909090908,
+                13.0,
+                14.09090909090909,
+                15.18181818181818,
+                16.272727272727273,
+                17.363636363636363,
+                18.454545454545453,
+                19.545454545454543,
+                20.636363636363633,
+                21.727272727272727,
+                22.818181818181817,
+                23.909090909090907
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                1.0,
+                2.090909090909091,
+                3.1818181818181817,
+                4.2727272727272725,
+                5.363636363636363,
+                6.454545454545454,
+                7.545454545454545,
+                8.636363636363637,
+                9.727272727272727,
+                10.818181818181817,
+                11.909090909090908,
+                13.0,
+                14.09090909090909,
+                15.18181818181818,
+                16.272727272727273,
+                17.363636363636363,
+                18.454545454545453,
+                19.545454545454543,
+                20.636363636363633,
+                21.727272727272727,
+                22.818181818181817,
+                23.909090909090907
+              ],
+              "count": [
+                8482,
+                1616,
+                953,
+                617,
+                369,
+                218,
+                118,
+                56,
+                27,
+                16,
+                6,
+                5,
+                4,
+                2,
+                0,
+                1,
+                2,
+                0,
+                0,
+                0,
+                1,
+                2
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.0,
+                0.06989700043360189,
+                0.13979400086720378,
+                0.20969100130080567,
+                0.27958800173440757,
+                0.3494850021680095,
+                0.41938200260161135,
+                0.4892790030352132,
+                0.5591760034688151,
+                0.629073003902417,
+                0.698970004336019,
+                0.7688670047696208,
+                0.8387640052032227,
+                0.9086610056368246,
+                0.9785580060704264,
+                1.0484550065040283,
+                1.1183520069376303,
+                1.1882490073712322,
+                1.258146007804834,
+                1.328043008238436
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.0,
+                0.06989700043360189,
+                0.13979400086720378,
+                0.20969100130080567,
+                0.27958800173440757,
+                0.3494850021680095,
+                0.41938200260161135,
+                0.4892790030352132,
+                0.5591760034688151,
+                0.629073003902417,
+                0.698970004336019,
+                0.7688670047696208,
+                0.8387640052032227,
+                0.9086610056368246,
+                0.9785580060704264,
+                1.0484550065040283,
+                1.1183520069376303,
+                1.1882490073712322,
+                1.258146007804834,
+                1.328043008238436
+              ],
+              "count": [
+                5861,
+                0,
+                0,
+                0,
+                2621,
+                0,
+                1616,
+                0,
+                953,
+                617,
+                0,
+                369,
+                336,
+                56,
+                43,
+                10,
+                5,
+                3,
+                2,
+                3
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": {
+            "type": "evidently:metric_result:DataByTarget",
+            "box_data": {
+              "current": {
+                "mins": [],
+                "lowers": [],
+                "means": [],
+                "uppers": [],
+                "maxs": [],
+                "values": []
+              },
+              "reference": {
+                "mins": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "lowers": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "means": [
+                  2.0,
+                  2.0,
+                  1.0
+                ],
+                "uppers": [
+                  3.0,
+                  3.0,
+                  2.0
+                ],
+                "maxs": [
+                  19.0,
+                  23.0,
+                  25.0
+                ],
+                "values": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            },
+            "scatter_data": null,
+            "contour_data": null,
+            "count_data": null,
+            "target_name": "target",
+            "target_type": "cat"
+          },
+          "counts_of_values": {
+            "current": {
+              "x": {},
+              "count": {}
+            },
+            "reference": {
+              "x": {
+                "0": 1,
+                "1": 2,
+                "2": 3,
+                "3": 4,
+                "4": 5,
+                "5": 6,
+                "6": 7,
+                "7": 8,
+                "8": 9,
+                "9": 10
+              },
+              "count": {
+                "0": 5861,
+                "1": 2621,
+                "2": 1616,
+                "3": 953,
+                "4": 617,
+                "5": 369,
+                "6": 218,
+                "7": 118,
+                "8": 56,
+                "9": 27
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently:metric_result:ColumnSummaryResult",
+        "column_name": "Sentiment for content",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 12495,
+          "count": 12495,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 0.28,
+          "std": 0.49,
+          "min": -0.98,
+          "p25": 0.0,
+          "p50": 0.42,
+          "p75": 0.69,
+          "max": 1.0,
+          "unique": 3489,
+          "unique_percentage": 27.92,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.0,
+          "most_common_percentage": 14.46
+        },
+        "current_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 0,
+          "count": 0,
+          "missing": null,
+          "missing_percentage": null,
+          "mean": null,
+          "std": null,
+          "min": null,
+          "p25": null,
+          "p50": null,
+          "p75": null,
+          "max": null,
+          "unique": null,
+          "unique_percentage": null,
+          "infinite_count": null,
+          "infinite_percentage": null,
+          "most_common": null,
+          "most_common_percentage": null
+        },
+        "plot_data": {
+          "type": "evidently:metric_result:DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently:metric_result:Histogram",
+            "current": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                -0.9753,
+                -0.87674,
+                -0.7781799999999999,
+                -0.6796199999999999,
+                -0.5810599999999999,
+                -0.48249999999999993,
+                -0.38393999999999984,
+                -0.28537999999999986,
+                -0.18681999999999988,
+                -0.0882599999999999,
+                0.010300000000000087,
+                0.10886000000000007,
+                0.20742000000000027,
+                0.30598000000000025,
+                0.40454000000000023,
+                0.5031000000000002,
+                0.6016600000000002,
+                0.7002200000000002,
+                0.7987800000000002,
+                0.8973400000000001
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                -0.9753,
+                -0.87674,
+                -0.7781799999999999,
+                -0.6796199999999999,
+                -0.5810599999999999,
+                -0.48249999999999993,
+                -0.38393999999999984,
+                -0.28537999999999986,
+                -0.18681999999999988,
+                -0.0882599999999999,
+                0.010300000000000087,
+                0.10886000000000007,
+                0.20742000000000027,
+                0.30598000000000025,
+                0.40454000000000023,
+                0.5031000000000002,
+                0.6016600000000002,
+                0.7002200000000002,
+                0.7987800000000002,
+                0.8973400000000001
+              ],
+              "count": [
+                100,
+                196,
+                245,
+                314,
+                320,
+                372,
+                479,
+                341,
+                291,
+                2002,
+                247,
+                266,
+                443,
+                601,
+                1297,
+                688,
+                1237,
+                946,
+                1162,
+                948
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                -3.3010299956639813,
+                -3.143923056233746,
+                -2.986816116803511,
+                -2.8297091773732754,
+                -2.6726022379430403,
+                -2.515495298512805,
+                -2.35838835908257,
+                -2.201281419652335,
+                -2.0441744802220994,
+                -1.8870675407918645,
+                -1.729960601361629,
+                -1.572853661931394,
+                -1.4157467225011588,
+                -1.2586397830709237,
+                -1.1015328436406882,
+                -0.944425904210453,
+                -0.7873189647802179,
+                -0.6302120253499828,
+                -0.47310508591974765,
+                -0.3159981464895121,
+                -0.15889120705927695
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                -3.3010299956639813,
+                -3.143923056233746,
+                -2.986816116803511,
+                -2.8297091773732754,
+                -2.6726022379430403,
+                -2.515495298512805,
+                -2.35838835908257,
+                -2.201281419652335,
+                -2.0441744802220994,
+                -1.8870675407918645,
+                -1.729960601361629,
+                -1.572853661931394,
+                -1.4157467225011588,
+                -1.2586397830709237,
+                -1.1015328436406882,
+                -0.944425904210453,
+                -0.7873189647802179,
+                -0.6302120253499828,
+                -0.47310508591974765,
+                -0.3159981464895121,
+                -0.15889120705927695
+              ],
+              "count": [
+                1,
+                0,
+                0,
+                1,
+                1,
+                0,
+                0,
+                2,
+                14,
+                8,
+                29,
+                11,
+                47,
+                80,
+                64,
+                123,
+                249,
+                469,
+                1504,
+                2145,
+                3094
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": {
+            "type": "evidently:metric_result:DataByTarget",
+            "box_data": {
+              "current": {
+                "mins": [],
+                "lowers": [],
+                "means": [],
+                "uppers": [],
+                "maxs": [],
+                "values": []
+              },
+              "reference": {
+                "mins": [
+                  -0.9753,
+                  -0.9724,
+                  -0.9399
+                ],
+                "lowers": [
+                  -0.3818,
+                  0.0,
+                  0.4215
+                ],
+                "means": [
+                  0.0,
+                  0.296,
+                  0.6249
+                ],
+                "uppers": [
+                  0.3415,
+                  0.6486,
+                  0.8126
+                ],
+                "maxs": [
+                  0.9945,
+                  0.9951,
+                  0.9959
+                ],
+                "values": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            },
+            "scatter_data": null,
+            "contour_data": null,
+            "count_data": null,
+            "target_name": "target",
+            "target_type": "cat"
+          },
+          "counts_of_values": {
+            "current": {
+              "x": {},
+              "count": {}
+            },
+            "reference": {
+              "x": {
+                "0": 0.0,
+                "1": 0.4404,
+                "2": 0.6249,
+                "3": 0.6369,
+                "4": 0.4215,
+                "5": 0.4927,
+                "6": -0.296,
+                "7": 0.5719,
+                "8": 0.3612,
+                "9": 0.3818
+              },
+              "count": {
+                "0": 1807,
+                "1": 508,
+                "2": 283,
+                "3": 265,
+                "4": 201,
+                "5": 146,
+                "6": 128,
+                "7": 115,
+                "8": 111,
+                "9": 81
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently:metric_result:ColumnSummaryResult",
+        "column_name": "OOV Words % for content",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 12495,
+          "count": 12495,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 12.14,
+          "std": 15.05,
+          "min": 0.0,
+          "p25": 3.03,
+          "p50": 9.09,
+          "p75": 15.09,
+          "max": 100.0,
+          "unique": 714,
+          "unique_percentage": 5.71,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.0,
+          "most_common_percentage": 23.35
+        },
+        "current_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 0,
+          "count": 0,
+          "missing": null,
+          "missing_percentage": null,
+          "mean": null,
+          "std": null,
+          "min": null,
+          "p25": null,
+          "p50": null,
+          "p75": null,
+          "max": null,
+          "unique": null,
+          "unique_percentage": null,
+          "infinite_count": null,
+          "infinite_percentage": null,
+          "most_common": null,
+          "most_common_percentage": null
+        },
+        "plot_data": {
+          "type": "evidently:metric_result:DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently:metric_result:Histogram",
+            "current": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.0,
+                4.545454545454546,
+                9.090909090909092,
+                13.636363636363637,
+                18.181818181818183,
+                22.72727272727273,
+                27.272727272727273,
+                31.81818181818182,
+                36.36363636363637,
+                40.909090909090914,
+                45.45454545454546,
+                50.00000000000001,
+                54.54545454545455,
+                59.09090909090909,
+                63.63636363636364,
+                68.18181818181819,
+                72.72727272727273,
+                77.27272727272728,
+                81.81818181818183,
+                86.36363636363637,
+                90.90909090909092,
+                95.45454545454547
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.0,
+                4.545454545454546,
+                9.090909090909092,
+                13.636363636363637,
+                18.181818181818183,
+                22.72727272727273,
+                27.272727272727273,
+                31.81818181818182,
+                36.36363636363637,
+                40.909090909090914,
+                45.45454545454546,
+                50.00000000000001,
+                54.54545454545455,
+                59.09090909090909,
+                63.63636363636364,
+                68.18181818181819,
+                72.72727272727273,
+                77.27272727272728,
+                81.81818181818183,
+                86.36363636363637,
+                90.90909090909092,
+                95.45454545454547
+              ],
+              "count": [
+                3577,
+                2590,
+                2585,
+                1426,
+                844,
+                394,
+                180,
+                236,
+                65,
+                23,
+                314,
+                9,
+                19,
+                24,
+                27,
+                14,
+                14,
+                3,
+                3,
+                2,
+                3,
+                143
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.017728766960431616,
+                0.12205883185725101,
+                0.22638889675407042,
+                0.3307189616508898,
+                0.4350490265477092,
+                0.5393790914445286,
+                0.643709156341348,
+                0.7480392212381674,
+                0.8523692861349867,
+                0.9566993510318061,
+                1.0610294159286255,
+                1.1653594808254448,
+                1.2696895457222643,
+                1.3740196106190838,
+                1.4783496755159031,
+                1.5826797404127224,
+                1.687009805309542,
+                1.7913398702063614,
+                1.8956699351031807
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.017728766960431616,
+                0.12205883185725101,
+                0.22638889675407042,
+                0.3307189616508898,
+                0.4350490265477092,
+                0.5393790914445286,
+                0.643709156341348,
+                0.7480392212381674,
+                0.8523692861349867,
+                0.9566993510318061,
+                1.0610294159286255,
+                1.1653594808254448,
+                1.2696895457222643,
+                1.3740196106190838,
+                1.4783496755159031,
+                1.5826797404127224,
+                1.687009805309542,
+                1.7913398702063614,
+                1.8956699351031807
+              ],
+              "count": [
+                5,
+                11,
+                43,
+                97,
+                173,
+                315,
+                561,
+                777,
+                1267,
+                1548,
+                1521,
+                1089,
+                772,
+                474,
+                278,
+                76,
+                354,
+                63,
+                153
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": {
+            "type": "evidently:metric_result:DataByTarget",
+            "box_data": {
+              "current": {
+                "mins": [],
+                "lowers": [],
+                "means": [],
+                "uppers": [],
+                "maxs": [],
+                "values": []
+              },
+              "reference": {
+                "mins": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "lowers": [
+                  4.860288894151077,
+                  4.0,
+                  0.0
+                ],
+                "means": [
+                  9.523809523809524,
+                  8.695652173913043,
+                  8.51063829787234
+                ],
+                "uppers": [
+                  15.0,
+                  13.72549019607843,
+                  16.119762699295514
+                ],
+                "maxs": [
+                  100.0,
+                  100.0,
+                  100.0
+                ],
+                "values": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            },
+            "scatter_data": null,
+            "contour_data": null,
+            "count_data": null,
+            "target_name": "target",
+            "target_type": "cat"
+          },
+          "counts_of_values": {
+            "current": {
+              "x": {},
+              "count": {}
+            },
+            "reference": {
+              "x": {
+                "0": 0.0,
+                "1": 20.0,
+                "2": 16.666666666666668,
+                "3": 14.285714285714286,
+                "4": 50.0,
+                "5": 12.5,
+                "6": 25.0,
+                "7": 9.090909090909092,
+                "8": 11.11111111111111,
+                "9": 10.0
+              },
+              "count": {
+                "0": 2918,
+                "1": 349,
+                "2": 325,
+                "3": 310,
+                "4": 308,
+                "5": 280,
+                "6": 262,
+                "7": 248,
+                "8": 245,
+                "9": 241
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently:metric_result:ColumnSummaryResult",
+        "column_name": "Non Letter Character % for content",
+        "column_type": "num",
+        "reference_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 12495,
+          "count": 12495,
+          "missing": 0,
+          "missing_percentage": 0.0,
+          "mean": 3.72,
+          "std": 6.41,
+          "min": 0.0,
+          "p25": 1.46,
+          "p50": 2.86,
+          "p75": 4.4,
+          "max": 100.0,
+          "unique": 2441,
+          "unique_percentage": 19.54,
+          "infinite_count": 0,
+          "infinite_percentage": 0.0,
+          "most_common": 0.0,
+          "most_common_percentage": 19.48
+        },
+        "current_characteristics": {
+          "type": "evidently:metric_result:NumericCharacteristics",
+          "number_of_rows": 0,
+          "count": 0,
+          "missing": null,
+          "missing_percentage": null,
+          "mean": null,
+          "std": null,
+          "min": null,
+          "p25": null,
+          "p50": null,
+          "p75": null,
+          "max": null,
+          "unique": null,
+          "unique_percentage": null,
+          "infinite_count": null,
+          "infinite_percentage": null,
+          "most_common": null,
+          "most_common_percentage": null
+        },
+        "plot_data": {
+          "type": "evidently:metric_result:DataQualityPlot",
+          "bins_for_hist": {
+            "type": "evidently:metric_result:Histogram",
+            "current": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.0,
+                4.166666666666667,
+                8.333333333333334,
+                12.5,
+                16.666666666666668,
+                20.833333333333336,
+                25.0,
+                29.166666666666668,
+                33.333333333333336,
+                37.5,
+                41.66666666666667,
+                45.833333333333336,
+                50.0,
+                54.16666666666667,
+                58.333333333333336,
+                62.50000000000001,
+                66.66666666666667,
+                70.83333333333334,
+                75.0,
+                79.16666666666667,
+                83.33333333333334,
+                87.5,
+                91.66666666666667,
+                95.83333333333334
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                0.0,
+                4.166666666666667,
+                8.333333333333334,
+                12.5,
+                16.666666666666668,
+                20.833333333333336,
+                25.0,
+                29.166666666666668,
+                33.333333333333336,
+                37.5,
+                41.66666666666667,
+                45.833333333333336,
+                50.0,
+                54.16666666666667,
+                58.333333333333336,
+                62.50000000000001,
+                66.66666666666667,
+                70.83333333333334,
+                75.0,
+                79.16666666666667,
+                83.33333333333334,
+                87.5,
+                91.66666666666667,
+                95.83333333333334
+              ],
+              "count": [
+                8966,
+                2722,
+                452,
+                143,
+                74,
+                20,
+                30,
+                9,
+                16,
+                11,
+                3,
+                2,
+                5,
+                2,
+                3,
+                2,
+                2,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                32
+              ],
+              "name": null
+            },
+            "current_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                -0.6711728427150833,
+                -0.5376142005793291,
+                -0.40405555844357494,
+                -0.2704969163078208,
+                -0.1369382741720666,
+                -0.003379632036312419,
+                0.13017901009944166,
+                0.26373765223519585,
+                0.39729629437095004,
+                0.5308549365067042,
+                0.6644135786424584,
+                0.7979722207782126,
+                0.9315308629139666,
+                1.0650895050497207,
+                1.1986481471854749,
+                1.332206789321229,
+                1.4657654314569832,
+                1.5993240735927374,
+                1.7328827157284916,
+                1.8664413578642458
+              ],
+              "count": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "name": null
+            },
+            "reference_log": {
+              "type": "evidently:metric_result:HistogramData",
+              "x": [
+                -0.6711728427150833,
+                -0.5376142005793291,
+                -0.40405555844357494,
+                -0.2704969163078208,
+                -0.1369382741720666,
+                -0.003379632036312419,
+                0.13017901009944166,
+                0.26373765223519585,
+                0.39729629437095004,
+                0.5308549365067042,
+                0.6644135786424584,
+                0.7979722207782126,
+                0.9315308629139666,
+                1.0650895050497207,
+                1.1986481471854749,
+                1.332206789321229,
+                1.4657654314569832,
+                1.5993240735927374,
+                1.7328827157284916,
+                1.8664413578642458
+              ],
+              "count": [
+                2,
+                5,
+                13,
+                51,
+                138,
+                325,
+                790,
+                1511,
+                2321,
+                2097,
+                1401,
+                680,
+                335,
+                171,
+                90,
+                43,
+                30,
+                16,
+                10,
+                32
+              ],
+              "name": null
+            }
+          },
+          "data_in_time": null,
+          "data_by_target": {
+            "type": "evidently:metric_result:DataByTarget",
+            "box_data": {
+              "current": {
+                "mins": [],
+                "lowers": [],
+                "means": [],
+                "uppers": [],
+                "maxs": [],
+                "values": []
+              },
+              "reference": {
+                "mins": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "lowers": [
+                  1.8691588785046729,
+                  1.680672268907563,
+                  0.0
+                ],
+                "means": [
+                  3.035790508465807,
+                  2.7777777777777777,
+                  2.7027027027027026
+                ],
+                "uppers": [
+                  4.4692737430167595,
+                  4.1526230334247805,
+                  4.417670682730924
+                ],
+                "maxs": [
+                  100.0,
+                  100.0,
+                  100.0
+                ],
+                "values": [
+                  0,
+                  1,
+                  2
+                ]
+              }
+            },
+            "scatter_data": null,
+            "contour_data": null,
+            "count_data": null,
+            "target_name": "target",
+            "target_type": "cat"
+          },
+          "counts_of_values": {
+            "current": {
+              "x": {},
+              "count": {}
+            },
+            "reference": {
+              "x": {
+                "0": 0.0,
+                "1": 3.125,
+                "2": 3.7037037037037037,
+                "3": 3.225806451612903,
+                "4": 4.0,
+                "5": 4.545454545454546,
+                "6": 2.7027027027027026,
+                "7": 4.761904761904762,
+                "8": 3.8461538461538463,
+                "9": 4.3478260869565215
+              },
+              "count": {
+                "0": 2434,
+                "1": 88,
+                "2": 81,
+                "3": 80,
+                "4": 80,
+                "5": 79,
+                "6": 78,
+                "7": 76,
+                "8": 76,
+                "9": 75
+              }
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently:metric_result:MetricResult"
+      },
+      {
+        "type": "evidently:metric_result:ColumnCorrelationsMetricResult",
+        "column_name": "target",
+        "current": {},
+        "reference": {
+          "cramer_v": {
+            "type": "evidently:metric_result:ColumnCorrelations",
+            "column_name": "target",
+            "kind": "cramer_v",
+            "values": {
+              "type": "evidently:metric_result:DistributionIncluded",
+              "x": [
+                "content"
+              ],
+              "y": [
+                0.986635471084941
+              ]
+            }
+          }
+        }
+      },
+      {
+        "type": "evidently:metric_result:TargetByFeaturesTableResults",
+        "current": {
+          "type": "evidently:metric_result:StatsByFeature",
+          "plot_data": {},
+          "predictions": null
+        },
+        "reference": null,
+        "target_name": null,
+        "columns": [],
+        "task": ""
+      }
+    ],
+    "tests": [],
+    "test_results": [],
+    "options": {
+      "color": null,
+      "render": null,
+      "data_definition": null
+    },
+    "data_definition": {
+      "columns": {
+        "target": {
+          "column_name": "target",
+          "column_type": "cat"
+        },
+        "sentiment": {
+          "column_name": "sentiment",
+          "column_type": "num"
+        },
+        "content": {
+          "column_name": "content",
+          "column_type": "cat"
+        }
+      },
+      "target": {
+        "column_name": "target",
+        "column_type": "cat"
+      },
+      "prediction_columns": null,
+      "id_column": null,
+      "datetime_column": null,
+      "embeddings": null,
+      "user_id": null,
+      "item_id": null,
+      "task": "classification",
+      "classification_labels": [
+        0,
+        1,
+        2
+      ],
+      "reference_present": true,
+      "recommendations_type": "score"
+    },
+    "run_metadata": {
+      "descriptors": {
+        "326b991736caeb90af5a508ca552500e.content": {
+          "feature_name": "326b991736caeb90af5a508ca552500e.content",
+          "display_name": "Text Length for content",
+          "feature_type": "num",
+          "feature_class": "TextLength"
+        },
+        "c57693348aa66cd662a4e2e71aafe962.content": {
+          "feature_name": "c57693348aa66cd662a4e2e71aafe962.content",
+          "display_name": "Sentence Count for content",
+          "feature_type": "num",
+          "feature_class": "SentenceCount"
+        },
+        "0183cabb866db8be395283f33a0b480c.content": {
+          "feature_name": "0183cabb866db8be395283f33a0b480c.content",
+          "display_name": "Sentiment for content",
+          "feature_type": "num",
+          "feature_class": "Sentiment"
+        },
+        "26c635127ca222ec7dc418d09fcbceb9.content": {
+          "feature_name": "26c635127ca222ec7dc418d09fcbceb9.content",
+          "display_name": "OOV Words % for content",
+          "feature_type": "num",
+          "feature_class": "OOVWordsPercentage"
+        },
+        "bafaec50480193ffd582ecc23d503c47.content": {
+          "feature_name": "bafaec50480193ffd582ecc23d503c47.content",
+          "display_name": "Non Letter Character % for content",
+          "feature_type": "num",
+          "feature_class": "NonLetterCharacterPercentage"
+        }
+      }
+    }
+  },
+  "metrics_ids": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "test_ids": [],
+  "options": {
+    "color": null,
+    "render": null,
+    "data_definition": null
+  },
+  "links": {
+    "datasets": {
+      "input": {
+        "reference": null,
+        "current": null,
+        "additional": {}
+      },
+      "output": {
+        "reference": null,
+        "current": null,
+        "additional": {}
+      }
+    },
+    "computation_config_id": null,
+    "task_id": null
+  }
+}
