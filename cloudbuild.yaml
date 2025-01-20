@@ -5,7 +5,7 @@ steps:
     'build',
     '.',
     '-t',
-    'europe-west1-docker.pkg.dev/$PROJECT_ID/my-mlops-repository/image-1',
+    'europe-west1-docker.pkg.dev/$PROJECT_ID/my-mlops-repository/$_IMAGE_NAME',
     '-f',
     'dummy_stuff/docker.dockerfile'
   ]
@@ -13,7 +13,10 @@ steps:
   id: 'Push container image'
   args: [
     'push',
-    'europe-west1-docker.pkg.dev/$PROJECT_ID/my-mlops-repository/image-1'
+    'europe-west1-docker.pkg.dev/$PROJECT_ID/my-mlops-repository/$_IMAGE_NAME'
   ]
 options:
   logging: CLOUD_LOGGING_ONLY
+
+substitutions:
+  _IMAGE_NAME: 'my_image'
